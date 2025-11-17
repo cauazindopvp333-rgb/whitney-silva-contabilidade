@@ -1,74 +1,208 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Whitney Silva Contabilidade</title>
-  <meta name="description" content="Contabilidade moderna para MEI, micro e pequenas empresas. Abertura de empresa, fiscal, folha e consultoria.">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: linear-gradient(180deg, #001f3f, #003c7a);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    /* -------- CABEÇALHO -------- */
+    header {
+      background: rgba(0,0,0,0.25);
+      backdrop-filter: blur(10px);
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 32px;
+      font-weight: 700;
+      color: #4cc9ff;
+      text-shadow: 0px 0px 10px #4cc9ff;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #4cc9ff;
+    }
+
+    /* -------- HERO -------- */
+    .hero {
+      padding: 120px 40px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 52px;
+      font-weight: 800;
+      line-height: 1.1;
+      text-shadow: 0px 0px 20px rgba(80,200,255,0.5);
+    }
+
+    .hero p {
+      margin-top: 20px;
+      font-size: 20px;
+      opacity: 0.9;
+    }
+
+    .btn {
+      margin-top: 35px;
+      display: inline-block;
+      background: #4cc9ff;
+      color: #00213d;
+      padding: 15px 35px;
+      border-radius: 12px;
+      font-size: 20px;
+      font-weight: 700;
+      box-shadow: 0px 0px 20px #4cc9ff;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.07);
+      box-shadow: 0px 0px 35px #4cc9ff;
+    }
+
+    /* -------- SEÇÃO SERVIÇOS -------- */
+    .servicos {
+      padding: 80px 40px;
+      text-align: center;
+    }
+
+    .servicos h2 {
+      font-size: 42px;
+      margin-bottom: 50px;
+      text-shadow: 0px 0px 15px rgba(80,200,255,0.4);
+    }
+
+    .cards {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.05);
+      padding: 30px;
+      width: 320px;
+      border-radius: 18px;
+      backdrop-filter: blur(8px);
+      box-shadow: 0px 0px 20px rgba(0,0,0,0.4);
+      transition: 0.4s;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0px 0px 35px rgba(80,200,255,0.4);
+    }
+
+    .card h3 {
+      font-size: 26px;
+      margin-bottom: 15px;
+      color: #4cc9ff;
+      text-shadow: 0px 0px 10px rgba(76,201,255,0.4);
+    }
+
+    .card p {
+      opacity: 0.85;
+      font-size: 16px;
+    }
+
+    /* -------- RODAPÉ -------- */
+    footer {
+      margin-top: 80px;
+      padding: 40px;
+      text-align: center;
+      background: rgba(0,0,0,0.3);
+      backdrop-filter: blur(10px);
+    }
+
+    footer p {
+      opacity: 0.8;
+      font-size: 16px;
+    }
+
+  </style>
 </head>
 
 <body>
-  <div class="wrap">
 
-    <header class="hero-card reveal">
-      <div>
-        <div class="brand">
-          <div class="logo">WS</div>
-          <div>
-            <h1>Whitney Silva Contabilidade</h1>
-            <p>Contabilidade moderna, humana e digital.</p>
-          </div>
-        </div>
+  <!-- CABEÇALHO -->
+  <header>
+    <div class="logo">Whitney Silva Contabilidade</div>
+    <nav>
+      <a href="#servicos">Serviços</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
 
-        <div class="hero-grid">
-          <div class="hero-text">
-            <h2>Foque no seu negócio. Nós cuidamos de toda a parte contábil.</h2>
-            <p>Atendimento especializado em MEI, micro e pequenas empresas.</p>
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Contabilidade Moderna<br>Para Crescer Com Segurança</h1>
+    <p>Atendimento profissional para MEI, Micro e Pequenas Empresas.  
+      Fiscal · Abertura de Empresa · Regularizações · Consultoria Completa.</p>
+    <a class="btn" href="https://wa.me/5531999945540">Fale Agora no WhatsApp</a>
+  </section>
 
-            <div class="cta-row">
-              <button class="btn btn-primary" id="btn-contact">Solicitar orçamento</button>
-              <a class="btn btn-ghost" href="#services">Ver serviços</a>
-            </div>
-          </div>
+  <!-- SERVIÇOS -->
+  <section class="servicos" id="servicos">
+    <h2>Nossos Serviços</h2>
 
-          <div>
-            <div class="contact-panel reveal" id="contact-panel">
-              <h3>Fale conosco</h3>
-              <form id="contactForm">
-                <input type="text" name="name" placeholder="Seu nome" required>
-                <input type="email" name="email" placeholder="Seu email" required>
-                <textarea name="message" placeholder="Escreva sua mensagem..." required></textarea>
-                <button class="btn btn-primary" type="submit">Enviar</button>
-              </form>
-            </div>
-          </div>
-        </div>
-
+    <div class="cards">
+      <div class="card">
+        <h3>Abertura de Empresa</h3>
+        <p>Processo rápido, completo e 100% orientado.</p>
       </div>
-    </header>
 
-    <section id="services" class="reveal">
-      <h2>Nossos serviços</h2>
-      <div class="services">
-        <div class="service"><h3>Abertura de empresa</h3><p>Tudo para iniciar sua empresa com segurança.</p></div>
-        <div class="service"><h3>Fiscal</h3><p>Apuração de impostos, SPED e rotinas fiscais completas.</p></div>
-        <div class="service"><h3>Folha de pagamento</h3><p>Férias, admissões, rescisões e cálculos trabalhistas.</p></div>
-        <div class="service"><h3>Consultoria tributária</h3><p>Planejamento para pagar menos impostos legalmente.</p></div>
-        <div class="service"><h3>Regularização</h3><p>Parcelamentos e solução de pendências fiscais.</p></div>
-        <div class="service"><h3>Contabilidade gerencial</h3><p>Indicadores e relatórios para tomada de decisão.</p></div>
+      <div class="card">
+        <h3>Fiscal & Tributário</h3>
+        <p>Organização e acompanhamento total das obrigações.</p>
       </div>
-    </section>
 
-    <footer>
-      © <span id="year">2025</span> Whitney Silva Contabilidade
-    </footer>
+      <div class="card">
+        <h3>Folha de Pagamento</h3>
+        <p>Gestão profissional de funcionários e encargos.</p>
+      </div>
 
-  </div>
+      <div class="card">
+        <h3>Consultoria Completa</h3>
+        <p>Planejamento e suporte direto para sua empresa crescer.</p>
+      </div>
+    </div>
+  </section>
 
-  <script src="script.js"></script>
+  <!-- RODAPÉ -->
+  <footer id="contato">
+    <p>E-mail profissional: <strong>whitney@carol.com.br</strong></p>
+    <p>WhatsApp: <strong>(31) 9 9994-5540</strong></p>
+    <p>© 2025 Whitney Silva Contabilidade — Todos os direitos reservados.</p>
+  </footer>
+
 </body>
 </html>
-
